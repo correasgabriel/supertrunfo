@@ -5,7 +5,8 @@ int main() {
     // Declarando variaveis
     char cidade[50], codigo_carta[3], estado;
     int populacao, pontos_turisticos;
-    float area, pib;
+    float area, densidade_populacional, pib_per_capita;
+    double pib;
     
 
     // Começando processo de cadastro de cartas
@@ -30,12 +31,20 @@ int main() {
     printf("Digite a área da cidade da sua carta em quilômetros quadrados:\n");
     scanf("%f", &area);
     
-    printf("Digite o PIB da cidade da sua carta:\n");
-    scanf("%f", &pib);
+    printf("Digite o PIB da cidade da sua carta (somente números):\n");
+    scanf("%lf", &pib);
     
     printf("Digite a quantidade de pontos turísticos da cidade da sua carta:\n");
     scanf("%d", &pontos_turisticos);
+
+    // Calculando a densidade populacional
     
+    densidade_populacional = (float)populacao / area;
+
+    // Calculando PIB per Capta
+
+    pib_per_capita = pib / populacao;
+
     // Mostrando os dados que o usuário inseriu:
 
     printf("Carta 1:\n");
@@ -44,8 +53,10 @@ int main() {
     printf("Nome da cidade: %s \n", cidade);
     printf("População: %d \n" , populacao);
     printf("Área: %.2f km² \n" , area);
-    printf("PIB: %.1f bilhões de reais \n" , pib);
+    printf("PIB: R$%.2lf\n" , pib);
     printf("Número de pontos turísticos: %d\n" , pontos_turisticos);
+    printf("Densidade populacional: %.2f hab/km²\n" , densidade_populacional);
+    printf("PIB per Capita: R$%.2f\n" , pib_per_capita);
 
     // Carta número 2
 
@@ -66,11 +77,19 @@ int main() {
     printf("Digite a área da cidade da sua carta em quilômetros quadrados:\n");
     scanf("%f", &area);
     
-    printf("Digite o PIB da cidade da sua carta:\n");
-    scanf("%f", &pib);
+    printf("Digite o PIB da cidade da sua carta (somente números):\n");
+    scanf("%lf", &pib);
     
     printf("Digite a quantidade de pontos turísticos da cidade da sua carta:\n");
     scanf("%d", &pontos_turisticos);
+
+    // Calculando a densidade populacional
+    
+    densidade_populacional = (float)populacao / area;
+
+    // Calculando PIB per Capta
+
+    pib_per_capita = pib / populacao;
     
     // mostrando os dados que o usuário inseriu:
 
@@ -80,8 +99,10 @@ int main() {
     printf("Nome da cidade: %s \n", cidade);
     printf("População: %d \n" , populacao);
     printf("Área: %.2f km² \n" , area);
-    printf("PIB: %.1f bilhões de reais \n" , pib);
+    printf("PIB: R$%.2lf\n" , pib);
     printf("Número de pontos turísticos: %d\n" , pontos_turisticos);
+    printf("Densidade populacional: %.2f hab/km²\n" , densidade_populacional);
+    printf("PIB per Capita: R$%.2f\n" , pib_per_capita);
 
     return 0;
 }
